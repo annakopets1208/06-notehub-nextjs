@@ -49,3 +49,13 @@ export const createNote = async (note: NoteMin): Promise<Note> => {
   );
   return createResp.data;
 };
+
+export const fetchNoteById = async (id: string): Promise<Note> => {
+  const res = await axios.get<Note>(
+    `https://notehub-public.goit.study/api/notes/${id}`,
+    {
+      headers: { Authorization: `Bearer ${myKey}` },
+    }
+  );
+  return res.data;
+};
