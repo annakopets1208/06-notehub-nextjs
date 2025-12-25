@@ -48,7 +48,7 @@ export default function App() {
         <NoteList notes={data?.notes ?? []} />
         {isModalOpen && (
           <Modal onClose={() => setIsModalOpen(false)}>
-            <NoteForm onClose={() => setIsModalOpen(true)} />
+            <NoteForm onClose={() => setIsModalOpen(false)} />
           </Modal>
         )}
       </div>
