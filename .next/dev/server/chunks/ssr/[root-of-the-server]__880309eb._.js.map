@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 26, "column": 0}, "map": {"version":3,"sources":["file:///D:/%D0%90%D0%BD%D1%8E%D1%82%D0%B0/vs%20code/Projects/06-notehub-nextjs/app/notes/%5Bid%5D/page.tsx"],"sourcesContent":["type Props = {\r\n  params: Promise<{ id: string }>;\r\n};\r\n\r\nconst NoteDetails = async ({ params }: Props) => {\r\n  const { id } = await params;\r\n  console.log(\"note id:\", id);\r\n\r\n  return <div>NoteDetails</div>;\r\n};\r\n\r\nexport default NoteDetails;\r\n"],"names":[],"mappings":";;;;;;AAIA,MAAM,cAAc,OAAO,EAAE,MAAM,EAAS;IAC1C,MAAM,EAAE,EAAE,EAAE,GAAG,MAAM;IACrB,QAAQ,GAAG,CAAC,YAAY;IAExB,qBAAO,8OAAC;kBAAI;;;;;;AACd;uCAEe"}}]
+}

@@ -39,7 +39,7 @@ export const deleteNote = async (id: string): Promise<Note> => {
 
 export const createNote = async (note: NoteMin): Promise<Note> => {
   const createResp = await axios.post<Note>(
-    "https://notehub-public.goit.study/api/notes",
+    "https://notehub-public.goit.study/api/notes/",
     note,
     {
       headers: {

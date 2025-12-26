@@ -1,9 +1,12 @@
 "use client";
 
-interface ErrorProps {
+type ErrorProps = {
   error: Error;
-}
+};
 
-export default function Error({ error }: ErrorProps) {
+const Error = ({ error }: ErrorProps) => {
+  console.log(error);
   return <p>Could not fetch note details. {error.message}</p>;
-}
+};
+
+export default Error;
