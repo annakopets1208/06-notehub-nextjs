@@ -135,7 +135,7 @@ const deleteNote = async (id)=>{
     return deleteResp.data;
 };
 const createNote = async (note)=>{
-    const createResp = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].post(`https://notehub-public.goit.study/api/notes/`, note, {
+    const createResp = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].post("https://notehub-public.goit.study/api/notes/", note, {
         headers: {
             Authorization: `Bearer ${myKey}`
         }

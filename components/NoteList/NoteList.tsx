@@ -13,13 +13,9 @@ interface NoteListProps {
 export default function NoteList({ notes }: NoteListProps) {
   const queryClient = useQueryClient();
 
-  const mutationDelete = useMutation({
-    mutationFn: async (id: string) => {
-      await deleteNote(id);
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["note"] });
-    },
+  const mutation = useMutation({
+    mutationFn: deleteNote,
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["notes"] }),
   });
 
   return (
@@ -37,7 +33,7 @@ export default function NoteList({ notes }: NoteListProps) {
                 </Link>
                 <button
                   className={css.button}
-                  onClick={() => mutationDelete.mutate(item.id)}
+                  onClick={() => mutation.mutate(item.id)}
                 >
                   Delete
                 </button>

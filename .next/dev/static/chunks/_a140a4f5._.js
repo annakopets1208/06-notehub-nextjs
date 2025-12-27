@@ -46,7 +46,7 @@ const deleteNote = async (id)=>{
     return deleteResp.data;
 };
 const createNote = async (note)=>{
-    const createResp = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`https://notehub-public.goit.study/api/notes/`, note, {
+    const createResp = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("https://notehub-public.goit.study/api/notes/", note, {
         headers: {
             Authorization: `Bearer ${myKey}`
         }
@@ -160,36 +160,34 @@ var _s = __turbopack_context__.k.signature();
 function NoteList(t0) {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(10);
-    if ($[0] !== "2ee5755131ab6d3f7748c7029b7bb1acb05cd4cf01d3d37c63fa78c5421d0917") {
+    if ($[0] !== "5305dc8d23144be991f2eac36e12bd7ae3f73218b6b062e7bc7875539705c675") {
         for(let $i = 0; $i < 10; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2ee5755131ab6d3f7748c7029b7bb1acb05cd4cf01d3d37c63fa78c5421d0917";
+        $[0] = "5305dc8d23144be991f2eac36e12bd7ae3f73218b6b062e7bc7875539705c675";
     }
     const { notes } = t0;
     const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"])();
     let t1;
     if ($[1] !== queryClient) {
         t1 = {
-            mutationFn: _temp,
-            onSuccess: ()=>{
-                queryClient.invalidateQueries({
+            mutationFn: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["deleteNote"],
+            onSuccess: ()=>queryClient.invalidateQueries({
                     queryKey: [
-                        "note"
+                        "notes"
                     ]
-                });
-            }
+                })
         };
         $[1] = queryClient;
         $[2] = t1;
     } else {
         t1 = $[2];
     }
-    const mutationDelete = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMutation"])(t1);
+    const mutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMutation"])(t1);
     let t2;
-    if ($[3] !== mutationDelete || $[4] !== notes) {
+    if ($[3] !== mutation || $[4] !== notes) {
         let t3;
-        if ($[6] !== mutationDelete) {
+        if ($[6] !== mutation) {
             t3 = ({
                 "NoteList[notes.map()]": (item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].listItem,
@@ -199,7 +197,7 @@ function NoteList(t0) {
                                 children: item.title
                             }, void 0, false, {
                                 fileName: "[project]/components/NoteList/NoteList.tsx",
-                                lineNumber: 45,
+                                lineNumber: 43,
                                 columnNumber: 85
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -207,7 +205,7 @@ function NoteList(t0) {
                                 children: item.content
                             }, void 0, false, {
                                 fileName: "[project]/components/NoteList/NoteList.tsx",
-                                lineNumber: 45,
+                                lineNumber: 43,
                                 columnNumber: 128
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -218,7 +216,7 @@ function NoteList(t0) {
                                         children: item.tag
                                     }, void 0, false, {
                                         fileName: "[project]/components/NoteList/NoteList.tsx",
-                                        lineNumber: 45,
+                                        lineNumber: 43,
                                         columnNumber: 201
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -227,40 +225,40 @@ function NoteList(t0) {
                                         children: "View details"
                                     }, void 0, false, {
                                         fileName: "[project]/components/NoteList/NoteList.tsx",
-                                        lineNumber: 45,
+                                        lineNumber: 43,
                                         columnNumber: 244
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].button,
                                         onClick: {
-                                            "NoteList[notes.map() > <button>.onClick]": ()=>mutationDelete.mutate(item.id)
+                                            "NoteList[notes.map() > <button>.onClick]": ()=>mutation.mutate(item.id)
                                         }["NoteList[notes.map() > <button>.onClick]"],
                                         children: "Delete"
                                     }, void 0, false, {
                                         fileName: "[project]/components/NoteList/NoteList.tsx",
-                                        lineNumber: 45,
+                                        lineNumber: 43,
                                         columnNumber: 317
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/NoteList/NoteList.tsx",
-                                lineNumber: 45,
+                                lineNumber: 43,
                                 columnNumber: 173
                             }, this)
                         ]
                     }, item.id, true, {
                         fileName: "[project]/components/NoteList/NoteList.tsx",
-                        lineNumber: 45,
+                        lineNumber: 43,
                         columnNumber: 42
                     }, this)
             })["NoteList[notes.map()]"];
-            $[6] = mutationDelete;
+            $[6] = mutation;
             $[7] = t3;
         } else {
             t3 = $[7];
         }
         t2 = notes.map(t3);
-        $[3] = mutationDelete;
+        $[3] = mutation;
         $[4] = notes;
         $[5] = t2;
     } else {
@@ -274,7 +272,7 @@ function NoteList(t0) {
                 children: t2
             }, void 0, false, {
                 fileName: "[project]/components/NoteList/NoteList.tsx",
-                lineNumber: 63,
+                lineNumber: 61,
                 columnNumber: 12
             }, this)
         }, void 0, false);
@@ -285,16 +283,13 @@ function NoteList(t0) {
     }
     return t3;
 }
-_s(NoteList, "qNHjzOM2ROFs6kSCpf89onMxbe0=", false, function() {
+_s(NoteList, "mUUakYvFQSudGRmMzZErOI9nuuc=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMutation"]
     ];
 });
 _c = NoteList;
-async function _temp(id) {
-    await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["deleteNote"])(id);
-}
 var _c;
 __turbopack_context__.k.register(_c, "NoteList");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
